@@ -1,6 +1,6 @@
 
 
-@media only screen  and (min-width: 1600px)
+@media only screen  and (min-width: 1600px) 
 {
 	body
 	{
@@ -21,7 +21,7 @@
 
 
 
-@media only screen and ( max-width: 1599px ) 
+@media only screen and ( max-width: 1599px ) and ( min-width: 768px ) 
 {
 	body
 	{
@@ -32,13 +32,32 @@
 	section
 	{
 		background-color: #88c1d0;
-		width: 350px;
+		width: 35%;
 		height: 200px;
 		
 		margin-left: 74px;
-    margin-top: 2%;
+		margin-top: 2%;
 
 
 
+	}
+}
+
+@media only screen and ( max-width: 767px )
+{
+	body
+	{
+		display: flex;
+		flex-direction: column;
+		height: 900px;
+		
+	}
+	section
+	{
+		margin: auto;
+		background-color: #88c1d0;
+		width: 30%;
+		height: 200px;
+		margin-top: 10px;	
 	}
 }

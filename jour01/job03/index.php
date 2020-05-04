@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 	<html>
 	<head>
-			
+		<meta name="viewport" content="width=device-width,initial-scale=1"><!--remet par defaut les taille pour enlever la protection d'affichage minimum -->
 		<link rel="stylesheet" type="text/css"    href="style.css"/>
 		
 
