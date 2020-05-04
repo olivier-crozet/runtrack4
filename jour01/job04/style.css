@@ -1,0 +1,49 @@
+
+
+
+
+
+
+/* premire essaie */ 
+
+@media only screen and (min-width: 768px)
+{
+ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	list-style: none;
+	}
+}
+
+
+/*/////////////////////////////hamburger///////////////////////////////////////*/
+
+@media only screen and ( max-width: 767px )
+{
+
+.hamburger .ligne
+{
+	width: 50px;
+	height: 5px;
+	display: block;
+	background-color: green;
+	margin:8px auto;
+	cursor: pointer;
+}
+ul{
+	
+	display: none;
+}
+
+
+.openmenu
+{
+	
+}
+/*.hamburger.is-active .ligne:nth-child(2) 
+{
+	opacity: 0;
+}
+
+}  */
