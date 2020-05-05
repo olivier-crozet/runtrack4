@@ -82,7 +82,7 @@
         <div class="card-image">
           <img src="images/windfoil.jpg">
           <span class="card-title">En Kitesurf</span>
-          <a href="https://www.google.com/maps/place/Pointe-Rouge,+Marseille/@43.2508899,5.3663345,15.19z/data=!4m5!3m4!1s0x12c9c7784ca8a67f:0x13426002c6e8806a!8m2!3d43.2406037!4d5.3744934" class="btn-floating halfway-fab waves-effect waves-light red"><i class="valign-wrapper" class="material-icons">+</i></a>
+          <a href="https://en.wikipedia.org/wiki/Foilboard" class="btn-floating halfway-fab waves-effect waves-light red"><i class="valign-wrapper" class="material-icons">+</i></a>
         </div>
         <div class="card-content">
           <p>very tecknic wave spot by north west.</p>
