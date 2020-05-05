@@ -28,15 +28,91 @@
         </div>
       </form></a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="sass.html">Accueil</a></li>
-        <li><a href="badges.html">Inscription</a></li>
-        <li><a href="collapsible.html">Connection</a></li>
+        <li><a href="">Accueil</a></li>
+        <li><a href="">Inscription</a></li>
+        <li><a href="">Connection</a></li>
       </ul>
     </div>
   </nav>
         
       </header>
+      <body>
+    <br/>
+    <br/>
+         <div class="container">
       <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="js/materialize.min.js"></script>
+
+
+      <section>
+        <form action="#">
+    <p>
+      <label>
+        <input name="group1" type="radio" checked />
+        <span>Homme</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input name="group1" type="radio" />
+        <span>Femme</span>
+      </label>
+    </p>
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Prénom" id="first_name" type="text" class="validate">
+          <label for="first_name">Prénom</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Nom</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input disabled value="Adresse" id="disabled" type="text" class="validate">
+          <label for="disabled">Adresse</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+        <div class="row">
+          <label>
+        <input type="checkbox" class="filled-in" checked="checked" />
+        <span>Informatique</span>
+      </label>
+      <label>
+        <input type="checkbox" class="filled-in" checked="checked" />
+        <span>Sport</span>
+      </label>
+      <label>
+        <input type="checkbox" class="filled-in" checked="checked" />
+        <span>Voyages</span>
+      </label>
+      <label>
+        <input type="checkbox" class="filled-in" checked="checked" />
+        <span>Lecture</span>
+      </label>
+        </div>
+      </div>
+      <div class="row">
+          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+      </div>
+  </form>
+        
+      </section>
+
+      </div>
     </body>
   </html>
