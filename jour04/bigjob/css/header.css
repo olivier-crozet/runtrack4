@@ -1,0 +1,11 @@
+
+
+.oc-bg-hover1
+{
+	background-color: #88c1d0;
+	color:white;
+}
+.oc-text-hover :hover
+{
+	background-color: #FFC107;
+}
