@@ -26,8 +26,10 @@
 include("header.php");
 ?>
 </header>
-
-  
+<br/>
+<br/>
+<h1 class="text-center">Connexion</h1>
+  <!--formulaire-->
 
 <article class="col-xs-12 col-sm-12  align-items-center col-md-9  col-lg-5 m-auto">
 	<form action="" method="POST" class=" p-5 mb-5 mt-5 oc-bg-hover1">
@@ -40,50 +42,36 @@ include("header.php");
     <label for="Password">Password</label>
     <input name="password" type="password" class="form-control" id="Password">
   </div>
-<div class="d-flex justify-content-around">
+<div class="d-flex justify-content-between">
   <button name="envoiconnexion" type="submit" class="btn btn-primary">Connexion</button>
-  <a href="inscription.php">inscrivez vous !</a>
+  <?php
+if (!isset($_SESSION['id'])) 
+  { ?>
+    <a href="inscription.php">inscrivez vous !</a>
+<?php } ?>
+ 
   </div>
+<br/><br/>
 
   <div>
      <button name="deconection" type="submit" class="btn btn-primary">Déconnexion</button>
   </div>
-
+<br/>
 
   <?php
+  if (isset($_SESSION['id'])) 
+  { ?>
+    <p>Vous etes bien connecté</p>
+<?php } 
 include("fonction-connexion.php");
   ?>
 </form>
 </article>
 
-
+<!-----------------------------------------------------FOOTER ------------------------------------->
 </main>
-<footer class=" col-sm-12display page-footer">
-  <article class="">
-          <div class=" col-sm-12container">
-            <div class="col-sm-12row">
-              <div class="col-sm-12 col-lg-l6 s12">
-                <h5 class="col-sm-12 white-text">Footer Content</h5>
-                <p class="col-sm-12col-sm-12 grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div>
-              <div class="col-sm-12 col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-          </div>
-        </article>  
-        </footer>
+<footer class=" oc-bg-footer-acueil col-sm-12display page-footer">
+  <?php include("footer.php");  ?>
+</footer>
 </body>
 </html>

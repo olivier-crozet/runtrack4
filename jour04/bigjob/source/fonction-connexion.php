@@ -7,10 +7,10 @@
 
   $connexion=mysqli_connect("localhost","root","","bigjob");
 if (isset($_POST['envoiconnexion'])) 
-{echo "stringfdggggggggggggggggggggggggggggggggggggggggggggggg";
+{
         if (!empty($_POST['mail']) && !empty($_POST['password']))
           {
-            echo "aaee";
+            
             $mail=htmlspecialchars($_POST['mail']);
             
             $password= password_hash($_POST["password"], PASSWORD_DEFAULT,array('cost'=> 12));
@@ -31,16 +31,15 @@ if (isset($_POST['envoiconnexion']))
              
                  if (password_verify($_POST['password'], $retour['password']))
                  {
-                 echo "string";
                   
                   $_SESSION['id']=$bostring[0][0];
                   echo "connecté";
-                  var_dump($_SESSION['id']);
-                  //header("location: index.php");
+                 
+                  header("location: connexion.php");
                 }
             else
             {
-              echo "le mot de passe ou le login ne correspond pas !";
+              echo "le mot de passe ou le mail ne correspond pas !";
             }
           }
    else
@@ -51,12 +50,13 @@ if (isset($_POST['envoiconnexion']))
 
  //  BOUTON DECONNEXION
 
-   if (isset($_POST['envoideconnexion'])) 
-   {
-     unset($_SESSION['login']);
-     unset($_SESSION['password']);
-     header("location:index.php");
-   }
 
+
+if (isset($_POST['deconection']))
+ {
+  session_destroy();
+header("location:accueil.php");
+
+}
 
 ?>

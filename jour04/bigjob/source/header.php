@@ -1,6 +1,7 @@
 
 <?php
 session_start();
+include("fonction-profil.php");
 ?>
 
 <link rel="stylesheet" type="text/css" href="css/home.css">
@@ -15,15 +16,44 @@ session_start();
 
 
 	
-
-
 <ul class="nav nav-pills nav-fill ">
+
   <li class="nav-item oc-text-hover">
-    <a class="nav-link text-white text-white  " href="#">Acceuil</a>
+    <a class="nav-link text-white text-white  " href="accueil.php">Acceuil</a>
   </li>
-  <li class="nav-item oc-text-hover">
-    <a class="nav-link text-white  " href="connexion.php">Connexion</a>
+
+<?php
+if (!empty($_SESSION['id'])) { 
+ 
+recuplogin();
+  ?>
+<li class="nav-item oc-text-hover">
+    <a class="nav-link text-white text-white" href="profil.php?<?php 
+ echo 'id=$id'; ?> " >profil</a>
+  </li> 
+
+  <li class="nav-item oc-text-hover" >
+    <form action="" method="POST" class="nav-link text-white text-white " >
+    <button name="deconnexion" class="oc-bg-hover1 oc-border-none" >Déconnecxion</button>
+    </form>
   </li>
+
+<?php }
+else
+{ ?>
+<li class="nav-item oc-text-hover">
+    <a class="nav-link text-white   " href="connexion.php">Connexion</a>
+  </li>
+<?php }
+?>
+
+
+  
 
 
 </ul>
+
+
+
+
+
