@@ -4,6 +4,7 @@
 
 	<!--liens css-->
 	 <link rel="stylesheet" type="text/css" href="../css/header.css">
+   <link rel="stylesheet" type="text/css" href="../css/profil.css">
 	<!--liens bootsrtap css -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <!--liens bootstrap js-->
@@ -21,10 +22,16 @@ include("header.php");
 </header>
 
 <main>
+  <br/>
+  <br/>
+  <br/>
 <h1 class="text-center">Profil</h1>
+  <br/>
+  <br/>
+  <br/>
 <article>
 <!------------FOTO-------------->
-	<div class="m-auto card col-lg-4" >
+	<div class="p-5  m-auto card col-lg-4" >
   <?php recupimageprofil(); ?>
   <div class="card-body">
   	<?php
@@ -32,6 +39,7 @@ include("header.php");
   	
  <p class=" card-text"><?php  recupmail(); ?>.</p>
   </div>
+  <br/>
 <?php }
     ?>
 
@@ -68,12 +76,17 @@ modif_foto()
   
 
 </article>
-
+<br/>
+<br/>
+<br/>
+<br/>
 
 
 
 
 </main>
-
+<footer class="mt-5 oc-bg-footer-acueil col-sm-12display page-footer">
+  <?php include("footer.php");  ?>
+</footer>
 </body>
 </html>
