@@ -70,7 +70,7 @@ include("fonction-connexion.php");
 
 <!-----------------------------------------------------FOOTER ------------------------------------->
 </main>
-<footer class=" oc-bg-footer-acueil col-sm-12display page-footer">
+<footer class="oc-bg-hover1 oc-bg-footer-acueil col-sm-12display page-footer">
   <?php include("footer.php");  ?>
 </footer>
 </body>
