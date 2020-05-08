@@ -21,22 +21,57 @@ include("header.php");
 </header>
 
 <main>
-
-
-
-	<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+<h1 class="text-center">Profil</h1>
+<article>
+<!------------FOTO-------------->
+	<div class="m-auto card col-lg-4" >
+  <?php recupimageprofil(); ?>
   <div class="card-body">
   	<?php
   	if (isset($_SESSION['id'])) { ?>
-
-  	<?php }
-  	?>
-
   	
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+ <p class=" card-text"><?php  recupmail(); ?>.</p>
   </div>
-</div>
+<?php }
+    ?>
+
+  <!-------modif profil------>
+
+<form action="" method="POST" enctype="multipart/form-data">
+  <div class=" form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">Modifier votre email.</small>
+  </div>
+  <div class="form-group">
+    <label for="modif-Password">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+    <small id="emailHelp" class="form-text text-muted">Modifier votre paswword.</small>
+    <br/>
+
+<div class="form-group">
+    <label for="exampleFormControlFile1">Modifier sa photo de Profil</label>
+    <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+
+  </div>
+  <input name="modif" type="submit" class="btn btn-primary" value="modifier">
+<?php
+modif_foto()
+
+?>
+
+</form>
+
+
+
+  
+
+</article>
+
+
+
+
 
 </main>
 
