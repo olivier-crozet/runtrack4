@@ -4,6 +4,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<?php
+if (isset($_POST['modif'])) {
+   header("location:accueil.php");
+}
+?>
+
 <meta charset="UTF-8">
 	<!--liens css-->
 	 <link rel="stylesheet" type="text/css" href="../css/header.css">
