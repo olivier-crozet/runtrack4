@@ -4,7 +4,7 @@
 //function inscription()
   // {     
 
-  var_dump($_POST['password'])   ;              
+          
   $connexion=mysqli_connect("localhost","root","","bigjob");
 if (isset($_POST["inscri"])) 
 {
@@ -15,7 +15,7 @@ if (isset($_POST["inscri"]))
                  if (($_POST['password']) == ($_POST['password2']))  
                  {    
                  	 //si utilisateur existe deja
-echo "zsedfziufdekfgyeg";
+
                   $mail= htmlspecialchars($_POST["mail"]);
                  
                   $password= password_hash($_POST["password"], PASSWORD_DEFAULT,array('cost'=> 12));
@@ -25,7 +25,7 @@ echo "zsedfziufdekfgyeg";
                  
                            if($retour==0)
                            {     
-                           echo "rrrrrrrrrrrrrrrrrrrrrrrr";  
+                           
                              $zero = 1;
                                  //insertion utilisateur                 
                             $help = "profilPics/profil.jpg";

@@ -81,7 +81,7 @@
       <div class="card">
         <div class="card-image">
           <img src="images/windfoil.jpg">
-          <span class="card-title">En Kitesurf</span>
+          <span class="card-title">En Foil</span>
           <a href="https://en.wikipedia.org/wiki/Foilboard" class="btn-floating halfway-fab waves-effect waves-light red"><i class="valign-wrapper" class="material-icons">+</i></a>
         </div>
         <div class="card-content">

@@ -1,7 +1,10 @@
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
-
+<meta charset="UTF-8">
 	<!--liens css-->
 	 <link rel="stylesheet" type="text/css" href="../css/header.css">
    <link rel="stylesheet" type="text/css" href="../css/profil.css">
@@ -43,33 +46,72 @@ include("header.php");
 <?php }
     ?>
 
+
+<?php
+//////////////////////////////////////////////mofif profil//////////////
+if (isset($_POST['modif'])) 
+{ 
+    if(isset($_POST['image']) && isset($_POST['mail']) && isset($_POST['password']) && isset($_POST['password2']) )
+    {
+     modif_foto();
+     modif_form();
+     
+   }
+   if (isset($_FILES['image'])) 
+   {
+  
+     modif_foto();
+     
+   } 
+   if (isset($_POST['mail']) && isset($_POST['password']) && isset($_POST['password2']))
+   {
+    modif_form();
+   
+   
+    
+  } 
+ }
+
+   ?>
   <!-------modif profil------>
 
 <form action="" method="POST" enctype="multipart/form-data">
   <div class=" form-group">
     <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input name="mail" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     <small id="emailHelp" class="form-text text-muted">Modifier votre email.</small>
   </div>
   <div class="form-group">
     <label for="modif-Password">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <input name="password" type="password" class="form-control" id="exampleInputPassword1">
     <small id="emailHelp" class="form-text text-muted">Modifier votre paswword.</small>
+    </div>
     <br/>
+
+     <div class="form-group">
+    <label for="modif-Password">Password</label>
+    <input name="password2" type="password" class="form-control" id="exampleInputPassword1">
+    <small id="emailHelp" class="form-text text-muted">Modifier votre paswword.</small>
+    </div>
+    <br/>
+
+
 
 <div class="form-group">
     <label for="exampleFormControlFile1">Modifier sa photo de Profil</label>
     <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
-  </div>
+ 
 
   </div>
   <input name="modif" type="submit" class="btn btn-primary" value="modifier">
-<?php
-modif_foto()
 
-?>
 
 </form>
+
+
+
+
+ 
 
 
 
@@ -83,10 +125,13 @@ modif_foto()
 
 
 
-
 </main>
 <footer class="mt-5 oc-bg-footer-acueil col-sm-12display page-footer">
-  <?php include("footer.php");  ?>
+  <?php include("footer.php"); 
+   ?>
 </footer>
 </body>
 </html>
+
+
+

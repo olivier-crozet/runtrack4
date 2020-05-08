@@ -24,12 +24,12 @@ include("fonction-profil.php");
 
 <?php
 if (!empty($_SESSION['id'])) { 
- 
+ $id=$_SESSION['id'];
 recuplogin();
   ?>
 <li class="nav-item oc-text-hover">
-    <a class="nav-link text-white text-white" href="profil.php?<?php 
- echo 'id=$id'; ?> " >profil</a>
+    <a class="nav-link text-white text-white" href="profil.php?<?php echo "id=$id" ?> " >profil</a>
+ 
   </li> 
 
   <li class="nav-item oc-text-hover" >
