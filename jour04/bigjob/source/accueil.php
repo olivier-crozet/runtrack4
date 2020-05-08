@@ -47,7 +47,7 @@ include("header.php");
 
 <article class="oc-text-hover" >
 <div class="m-auto text-center col-md-8 alert alert-success" role="alert">
-	<a href="col-md-8  confirmation.php">
+	<a href="desuite.php" class="col-md-8">
   <h4 class="text-danger alert-heading">venir desuite</h4>
   <p>Il y a actuelement ... Places disponible.</p>
   <hr>
@@ -58,7 +58,7 @@ include("header.php");
 
 
 <div class=" m-auto text-center col-md-8 alert alert-success" role="alert">
-	<a  href="col-md-8  confirmation.php">
+	<a  href="agenda.php" class="col-md-8  confirmation.php">
   <h4 class=" alert-heading">reserver seule</h4>
   <p>Il y a actuelement ... Places disponible.</p>
   <hr>
