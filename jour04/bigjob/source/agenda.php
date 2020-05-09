@@ -43,8 +43,51 @@ include("fonction-agenda.php");
 
 			<?php } ?>
 		</ul>
-
 	</div>
+	<?php  $dates = current($dates); ?>
+	<?php foreach ($dates as $m => $days):  ?>
+	
+		<div class="month" id="month<?php echo $m; ?>">
+			<table>
+				<thead>
+					<tr>
+						<?php foreach ($date->days as $d):  ?>
+							<th><?php echo substr($d,0,3) ?></th> 
+						<?php endforeach;  ?>
+					</tr>
+				</thead>
+				<tbody>
+					<tr></tr>
+					  <?php $end =($days); foreach ($days as $d => $w):  ?>
+					  	   <?php //place bien les jours 
+					  	   if($d == 1)  { ?>
+					  	   <td colspan="<?php echo $w-1 ;?>"class="oc-padding"></td>
+
+					  	   <?php } ?>
+					  	<td><?php echo $d; ?> </td>
+					  	<?php if($w == 7) 
+					  	{ ?>
+					  		<tr></tr>
+
+					  <?php	} ?>
+					 <?php endforeach; 
+					 //si c'est pas un dimanche 
+					 if ($end != 7) 
+					 { ?>
+					 	<td colspan="<?php echo $w-1; ?>" class=""></td>
+					 <?php } ?>
+
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+	<?php endforeach; ?> 
+	
+
+
+		
+
 <pre><?php print_r($dates); ?></pre>
 
 </main>
