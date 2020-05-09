@@ -30,10 +30,21 @@ include("header.php");
 	<?php
 include("fonction-agenda.php");
 	$date = new Date();
-	$year =  date('y');
+	$year =  date('Y');
 	$dates = $date->getAll($year);
 	
 	?>
+	<div class="years"><?php echo $year ; ?></div>
+	<div class="months">
+		<ul>
+			<?php /////id du foreach donne un id aut incrementer au mois   //substr affiche 3 letre et les utf_8 sa debug les accents
+			foreach ($date->months as $id =>$m){ ?>
+			<li><a href="#"id="linkMounth"><?php echo $id+1 ; ?><?php echo utf8_encode(substr(utf8_decode($m),0,3)); ?></a></li>
+
+			<?php } ?>
+		</ul>
+
+	</div>
 <pre><?php print_r($dates); ?></pre>
 
 </main>

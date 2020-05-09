@@ -4,6 +4,8 @@
  */
 class Date
 {
+	var $days   = array('Lundi', 'Mardi','Mercredi','Jeudi','Vendredi', 'Samedi','Dimanche',);
+	var $months = array('Janvier','Fevrier','Mars','Avril','Mai','Juin','Juillet','Aout','Septembre','Octobre','Novembre','Décembre');
 	
 	function getAll($year)
 	{
@@ -31,10 +33,10 @@ class Date
 
 ///////////////////////////////////////:version objet attention a la mise a jour ovh////////////
 		    $date = new DateTime($year.'-01-01');
-		    while($date->format('y') <= $year) 
+		    while($date->format('Y') <= $year) 
 		    {
 		    
-		    $y = $date->format('y');
+		    $y = $date->format('Y');
 		    $m = $date->format('n');//le n enleve le zero devant le 01 du mois
 		    $d = $date->format('j');// le j enleve le zero devant le 01 du jour
 		//change deux jour pour les avoir de 0 a 7
